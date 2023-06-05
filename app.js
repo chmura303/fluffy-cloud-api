@@ -2,8 +2,10 @@ import { getCity, getWeather } from './forecast.js';
 
 const form = document.querySelector('#form');
 const input = document.querySelector('#input');
-const result = document.querySelector('#result');
-const result1 = document.querySelector('#result1');
+const welcomeMssg = document.querySelector('.welcome.mssg');
+const resultName = document.querySelector('.result.name');
+const resultCond = document.querySelector('.result.cond');
+const resultTemp = document.querySelector('.result.temp');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -12,20 +14,14 @@ form.addEventListener('submit', e => {
 
   getCity(city)
     .then(data => {
-      result.textContent = data.EnglishName;
+      welcomeMssg.style.display = 'none';
+      resultName.textContent = data.EnglishName;
       return getWeather(data.Key);
     })
     .then(data => {
-      result1.textContent = data.WeatherText;
+      resultCond.textContent = data.WeatherText;
+      resultTemp.innerHTML = `<p>${data.Temperature.Metric.Value}&deg;C</p>`;
     });
 
-  // getCity(city)
-  //   .then(data => {
-  //     result.textContent = data.EnglishName;
-  //     return getWeather(data.Key);
-  //   })
-  //   .then(data => {
-  //     result1.textContent = data.WeatherText;
-  //   });
   form.reset();
 });

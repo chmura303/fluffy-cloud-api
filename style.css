@@ -19,7 +19,7 @@
 body {
   min-height: 100vh;
   color: #fff;
-  background: #23232397;
+  background: #173e43;
 }
 
 img,
@@ -32,14 +32,88 @@ video {
 
 /* Custom CSS */
 
+.circle.one {
+  position: absolute;
+  top: 150px;
+  right: 140px;
+  background: #fae596;
+  height: 225px;
+  width: 225px;
+  border-radius: 50%;
+}
+
 .container {
-  border: 1px solid #fff;
+  position: relative;
+  margin: 25vh auto;
+  border-radius: 4px;
   max-width: 360px;
   min-height: 360px;
   text-align: center;
   padding: 1rem;
+  font-family: 'Sora', sans-serif;
+
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+#input {
+  color: #fff;
+  min-height: 28px;
+  max-width: 14rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+
+#input::placeholder {
+  color: #fff;
 }
 
 #btn {
   cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  color: #173e43;
+}
+
+.welcome.mssg {
+  font-size: 2rem;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.result:not(:last-of-type) {
+  padding-bottom: 1rem;
+}
+
+.result.name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.result.cond {
+  font-size: 1.25rem;
+}
+
+.result.temp {
+  font-size: 3rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+}
+
+.footer.hr {
+  color: #fff;
+}
+
+.footer.copy {
+  padding: 0.75rem 0;
 }

@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SunDrops.com</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,29 +24,33 @@
     <script type="module" src="./app.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <main>
-        <form action="" id="form">
-          <input
-            type="text"
-            name="city"
-            id="input"
-            placeholder="Enter a city"
-            required
-            autofocus
-          />
-          <button type="submit" id="btn">Search</button>
-        </form>
-
+    <div class="wrapper">
+      <div class="circle one"></div>
+      <div class="container">
+        <main id="main">
+          <form action="" id="form">
+            <input
+              type="text"
+              name="city"
+              id="input"
+              placeholder="Enter a city"
+              required
+              autofocus
+            />
+            <button type="submit" id="btn">Search</button>
+          </form>
+          <br />
+          <div class="welcome mssg">SunDrops.com - your favorite web app!</div>
+          <div class="result name"></div>
+          <div class="result cond"></div>
+          <div class="result temp"></div>
+        </main>
         <br />
-        <div id="result"></div>
-        <div id="result1"></div>
-      </main>
-      <br />
-      <footer>
-        <hr class="footer-hr" />
-        <div class="copyright">Copyright &copy; 2023 chmura303</div>
-      </footer>
+        <footer id="footer">
+          <hr class="footer hr" />
+          <div class="footer copy">Copyright &copy; 2023 chmura303</div>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
