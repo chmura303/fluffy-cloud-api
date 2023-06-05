@@ -1,0 +1,45 @@
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  color: #fff;
+  background: #23232397;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Custom CSS */
+
+.container {
+  border: 1px solid #fff;
+  max-width: 360px;
+  min-height: 360px;
+  text-align: center;
+  padding: 1rem;
+}
+
+#btn {
+  cursor: pointer;
+}
