@@ -20,7 +20,7 @@ form.addEventListener('submit', e => {
     })
     .then(data => {
       resultCond.textContent = data.WeatherText;
-      resultTemp.innerHTML = `<p>${data.Temperature.Metric.Value}&deg;C</p>`;
+      resultTemp.innerHTML = `${data.Temperature.Metric.Value}&deg;C`;
     });
 
   form.reset();
